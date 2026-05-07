@@ -183,7 +183,7 @@ vertices.Draw();
             <!-- SMB Clone -->
             <article class="project-card" data-index="0">
                 <div class="card-image">
-                    <img src="assets/images/placeholder.png" alt="Super Mario Bros Clone" loading="lazy">
+                    <img src="assets/images/mario.png" alt="Super Mario Bros Clone" loading="lazy">
                     <div class="card-image-overlay">
                         <span>C++ &nbsp;·&nbsp; Reverse Engineering &nbsp;·&nbsp; NES</span>
                     </div>
@@ -222,7 +222,7 @@ vertices.Draw();
             <!-- Chess Engine -->
             <article class="project-card" data-index="1">
                 <div class="card-image">
-                    <img src="assets/images/placeholder.png" alt="Chess Engine" loading="lazy">
+                    <img src="assets/images/chess.png" alt="Chess Engine" loading="lazy">
                     <div class="card-image-overlay">
                         <span>C++ &nbsp;·&nbsp; AI &nbsp;·&nbsp; UCI</span>
                     </div>
@@ -256,7 +256,7 @@ vertices.Draw();
             <!-- CHIP-8 Family -->
             <article class="project-card" data-index="2">
                 <div class="card-image">
-                    <img src="assets/images/placeholder.png" alt="CHIP-8 Toolchain" loading="lazy">
+                    <img src="assets/images/chip8.png" alt="CHIP-8 Toolchain" loading="lazy">
                     <div class="card-image-overlay">
                         <span>C++ &nbsp;·&nbsp; Emulation &nbsp;·&nbsp; Compilers</span>
                     </div>
@@ -289,37 +289,38 @@ vertices.Draw();
                 </div>
             </article>
 
-            <!-- Neural Network -->
+            <!-- Graph Plotter -->
             <article class="project-card" data-index="3">
                 <div class="card-image">
-                    <img src="assets/images/placeholder.png" alt="Neural Network from Scratch" loading="lazy">
+                    <img src="assets/images/graph.png" alt="Graph Plotter" loading="lazy">
                     <div class="card-image-overlay">
-                        <span>C++ &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; MNIST</span>
+                        <span>C++ &nbsp;·&nbsp; Parsing &nbsp;·&nbsp; Math</span>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="card-header-row">
-                        <h3>Neural Network from Scratch</h3>
-                        <a href="https://github.com/Krishiv00" target="_blank" class="card-gh-link" aria-label="GitHub">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/> </svg>
+                        <h3>Graph Plotter</h3>
+                        <a href="https://github.com/Krishiv00/Graph-Plotter" target="_blank" class="card-gh-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                         </a>
                     </div>
                     <p class="card-desc">
-                        Written entirely in C++ with zero libraries - the network architecture,
-                        forward pass, backpropagation, and training loop are all hand-coded.
-                        The network layout is fully dynamic: pass a vector of layer sizes and
-                        it configures itself at runtime.
+                        A lightweight interactive 2D graph plotting application written in C++.
+                        Supports standard function graphs (<code>y = f(x)</code>), inverse-style
+                        graphs (<code>x = f(y)</code>), and fully parametric equations.
+                        Built for exploring mathematical behaviour visually.
                     </p>
                     <p class="card-desc">
-                        Trained on logic gates first, then the MNIST digit recognition dataset.
-                        Includes a custom binary serialization format that saves and restores
-                        arbitrary network structures, weights, and biases to disk with no loss.
+                        Multiple equations can be rendered simultaneously with smooth panning,
+                        zooming, and live previews while typing. Each graph supports custom
+                        mathematical domains - including expression-based ranges like
+                        <code>{ -2 * pi &lt;= x &lt;= 2 * pi }</code>.
                     </p>
                     <div class="card-tags">
                         <span class="tag">C++</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Backpropagation</span>
-                        <span class="tag">MNIST</span>
+                        <span class="tag">Parsing</span>
+                        <span class="tag">Math</span>
+                        <span class="tag">Graphics</span>
                     </div>
                 </div>
             </article>
@@ -327,7 +328,7 @@ vertices.Draw();
             <!-- Custom Shell -->
             <article class="project-card" data-index="4">
                 <div class="card-image">
-                    <img src="assets/images/placeholder.png" alt="Custom Shell" loading="lazy">
+                    <img src="assets/images/shell.png" alt="Custom Shell" loading="lazy">
                     <div class="card-image-overlay">
                         <span>C++ &nbsp;·&nbsp; Systems &nbsp;·&nbsp; Cross-Platform</span>
                     </div>
@@ -363,7 +364,7 @@ vertices.Draw();
             <!-- Text Editor -->
             <article class="project-card" data-index="5">
                 <div class="card-image">
-                    <img src="assets/images/placeholder.png" alt="Text Editor" loading="lazy">
+                    <img src="assets/images/editor.png" alt="Text Editor" loading="lazy">
                     <div class="card-image-overlay">
                         <span>C++ &nbsp;·&nbsp; Native &nbsp;·&nbsp; WIP</span>
                     </div>
@@ -377,9 +378,7 @@ vertices.Draw();
                     </div>
                     <p class="card-desc">
                         A native VSCode-style editor built in C++. The motivation is concrete: VSCode
-                        runs on Electron - a VM on a VM - and on older hardware it shows. Recording
-                        code videos becomes choppy. This editor is built natively, with dirty rendering
-                        (only redraw on change) for minimal resource usage.
+                        runs on Electron - a VM on a VM - and on older hardware it shows. This editor is built natively for minimal resource usage.
                     </p>
                     <p class="card-desc">
                         Already working: file explorer with tree view, file tabs, image preview, full
@@ -403,7 +402,7 @@ vertices.Draw();
             <!-- Terrain Generator -->
             <article class="project-card" data-index="6">
                 <div class="card-image">
-                    <img src="assets/images/placeholder.png" alt="Terrain Generator" loading="lazy">
+                    <img src="assets/images/terrain.png" alt="Terrain Generator" loading="lazy">
                     <div class="card-image-overlay">
                         <span>C++ &nbsp;·&nbsp; Rendering &nbsp;·&nbsp; Procedural</span>
                     </div>
@@ -455,10 +454,10 @@ vertices.Draw();
                     <span class="other-card-desc">Rigid body physics engine with collision resolution, built from scratch</span>
                     <span class="other-card-tag">C++ · Physics</span>
                 </a>
-                <a href="https://github.com/Krishiv00/Graph-Plotter" target="_blank" class="other-card">
-                    <span class="other-card-name">Graph Plotter</span>
-                    <span class="other-card-desc">Desmos-style 2D plotter with a custom equation parser and editor</span>
-                    <span class="other-card-tag">C++ · Parsing · Math</span>
+                <a href="https://github.com/Krishiv00" target="_blank" class="other-card">
+                    <span class="other-card-name">Neural Network from Scratch</span>
+                    <span class="other-card-desc">Network, backpropagation, and training loop hand-coded in C++ with no libraries. Dynamic architecture, trained on MNIST. Custom binary serialization format</span>
+                    <span class="other-card-tag">C++ · Machine Learning · MNIST</span>
                 </a>
                 <a href="https://github.com/Krishiv00" target="_blank" class="other-card">
                     <span class="other-card-name">Voxel Engines</span>
