@@ -650,12 +650,12 @@ code {
     border: 1px solid var(--border);
     border-radius: 6px;
     overflow: hidden;
-    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s, box-shadow 0.2s;
+    will-change: transform;
 }
 
 .project-card.visible {
@@ -685,12 +685,11 @@ code {
     height: 100%;
     object-fit: cover;
     filter: brightness(0.7) saturate(0.5);
-    transition: filter 0.3s, transform 0.3s;
+    transition: filter 0.3s;
 }
 
 .project-card:hover .card-image img {
     filter: brightness(0.85) saturate(0.7);
-    transform: scale(1.02);
 }
 
 .card-image-overlay {
