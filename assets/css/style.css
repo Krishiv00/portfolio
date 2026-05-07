@@ -5,28 +5,28 @@
 }
 
 :root {
-    --bg:           #0a0e13;
-    --bg-2:         #0d1117;
-    --bg-3:         #111820;
-    --bg-card:      #0f1520;
-    --bg-card-h:    #141d2b;
-    --border:       #1e2d3d;
-    --border-h:     #2a3f55;
-    --green:        #30a46c;
-    --green-dim:    #1e6645;
-    --green-glow:   rgba(48, 164, 108, 0.15);
-    --amber:        #f0a429;
-    --red:          #e54d4d;
-    --text:         #cdd9e5;
-    --text-dim:     #768390;
-    --text-dimmer:  #444f5a;
-    --code-bg:      #080d12;
+    --bg: #0a0e13;
+    --bg-2: #0d1117;
+    --bg-3: #111820;
+    --bg-card: #0f1520;
+    --bg-card-h: #141d2b;
+    --border: #1e2d3d;
+    --border-h: #2a3f55;
+    --green: #30a46c;
+    --green-dim: #1e6645;
+    --green-glow: rgba(48, 164, 108, 0.15);
+    --amber: #f0a429;
+    --red: #e54d4d;
+    --text: #cdd9e5;
+    --text-dim: #768390;
+    --text-dimmer: #444f5a;
+    --code-bg: #080d12;
 
-    --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
-    --font-serif:   'Fraunces', Georgia, serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-serif: 'Fraunces', Georgia, serif;
 
-    --max-w:        1200px;
-    --section-pad:  120px;
+    --max-w: 1200px;
+    --section-pad: 120px;
 }
 
 html {
@@ -397,6 +397,42 @@ code {
 
 .hero-text {
     animation: fadeSlideUp 0.7s 0.15s ease both;
+}
+
+.hero-text-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.hero-text-copy {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-photo-wrap {
+    flex-shrink: 0;
+}
+
+.hero-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--green-dim);
+    box-shadow: 0 0 0 4px rgba(48, 164, 108, 0.08), 0 8px 32px rgba(0,0,0,0.4);
+    display: block;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Center photo against the 2-line name (2 × ~80px = ~160px tall at max size) */
+    margin-top: 0;
+    align-self: flex-start;
+    position: relative;
+    top: calc(clamp(48px, 6vw, 80px) - 100px);
+}
+
+.hero-photo:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 0 4px rgba(48, 164, 108, 0.15), 0 8px 32px rgba(0,0,0,0.4);
 }
 
 .hero-name {
@@ -1139,6 +1175,19 @@ code {
     .hero-cta {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .hero-text-inner {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .hero-photo {
+        width: 110px;
+        height: 110px;
+        flex-shrink: 0;
+        margin-top: 4px;
     }
 
     .contact-link {

@@ -120,17 +120,43 @@ cardEls.forEach(el => cardObserver.observe(el));
 const sections = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a');
 
-const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            navAnchors.forEach(a => a.classList.remove('active'));
-            const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-            if (active) active.classList.add('active');
+function setActiveNav() {
+    const scrollY = window.scrollY + window.innerHeight * 0.25;
+    let current = null;
+    sections.forEach(section => {
+        if (section.offsetTop <= scrollY) {
+            current = section.id;
         }
     });
-}, { threshold: 0.4 });
+    navAnchors.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+    });
+}
 
-sections.forEach(s => sectionObserver.observe(s));
+let scrollSuppressed = false;
+
+function setActiveNavIfNotSuppressed() {
+    if (!scrollSuppressed) setActiveNav();
+}
+
+navAnchors.forEach(a => {
+    a.addEventListener('click', () => {
+        const href = a.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+
+        navAnchors.forEach(n => n.classList.remove('active'));
+        a.classList.add('active');
+
+        scrollSuppressed = true;
+        clearTimeout(window._navScrollTimer);
+        window._navScrollTimer = setTimeout(() => {
+            scrollSuppressed = false;
+        }, 800);
+    });
+});
+
+window.addEventListener('scroll', setActiveNavIfNotSuppressed, { passive: true });
+setActiveNav();
 
 const codeContent = document.querySelector('.code-content');
 
