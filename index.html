@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishiv Goel - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <span class="nav-logo">KG<span class="cursor-blink">_</span></span>
+            <ul class="nav-links">
+                <li><a href="#about">about</a></li>
+                <li><a href="#glim">glim</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#writing">writing</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about" class="mobile-link">about</a></li>
+            <li><a href="#glim" class="mobile-link">glim</a></li>
+            <li><a href="#projects" class="mobile-link">projects</a></li>
+            <li><a href="#writing" class="mobile-link">writing</a></li>
+            <li><a href="#contact" class="mobile-link">contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <section id="about" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-terminal">
+                <div class="terminal-bar">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">krishiv@portfolio ~ $</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
+                    <p class="terminal-line t-output">Krishiv Goel</p>
+                    <p class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat about.txt</span></p>
+                    <div class="terminal-line t-output about-text">
+                        Self-taught systems programmer. I started with Windows batch scripts,
+                        moved to Python, and landed in C++ - where I've stayed. I build things
+                        at the low level: engines, renderers, emulators, parsers, tools.
+                        I also write - about technology, AI, and the stuff that makes us human.
+                    </div>
+                    <p class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat skills.txt</span></p>
+                    <div class="terminal-line t-output skills-grid">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">OpenGL</span>
+                        <span class="skill-tag">Systems Programming</span>
+                        <span class="skill-tag">Graphics</span>
+                        <span class="skill-tag">Reverse Engineering</span>
+                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">Content Writing</span>
+                    </div>
+                    <p class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd typed-cmd"></span><span class="cursor-blink">▋</span></p>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-name">Krishiv<br><em>Goel</em></h1>
+                <p class="hero-sub">Systems programmer &amp; technical writer.<br>I build from scratch - and document what I learn.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <a href="#contact" class="btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">scroll<span class="scroll-arrow">↓</span></div>
+    </section>
+
+    <!-- GLIM Featured -->
+    <section id="glim" class="glim-section">
+        <div class="glim-inner reveal">
+        <div class="section-label">// featured project</div>
+            <div class="glim-header">
+                <div>
+                    <h2 class="glim-title">GLIM</h2>
+                    <p class="glim-subtitle">Graphics Layer &amp; Interactive Middleware</p>
+                </div>
+                <div class="glim-tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">OpenGL</span>
+                    <span class="tag">Framework</span>
+                    <span class="tag">WIP</span>
+                </div>
+            </div>
+            <div class="glim-body">
+                <div class="glim-description">
+                    <p>
+                        Raw OpenGL is brutal. Hundreds of lines of boilerplate just to open a window
+                        and draw a triangle - shader compilation, buffer binding, stride calculations,
+                        manual lifetime management. GLIM exists to make that disappear.
+                    </p>
+                    <p>
+                        It's a C++ framework built on top of OpenGL that abstracts the painful parts
+                        into clean, intuitive objects. A <code>Window</code> handles creation, input devices,
+                        vsync, fullscreen, and frame timing in one constructor call. A <code>Shader</code>
+                        loads, compiles, and links from two file paths - and its templated
+                        <code>SetUniform</code> figures out the right GL call automatically, no matter
+                        what type you pass. A <code>VertexArray</code> eliminates stride and offset
+                        math entirely - just call <code>PushLayout&lt;type&gt;(count)</code> per attribute
+                        and it handles the rest.
+                    </p>
+                    <p>
+                        Beyond rendering: a full collision detection system covering 12+ shapes
+                        (Rectangle, Sphere, Cone, Cylinder, Polygon2D, Polygon3D, and more) with
+                        every cross-type <code>Intersects()</code> pair implemented. A Camera3D that
+                        owns its own matrices and passes to a shader in one line. Input, clock,
+                        profiler, SSBO, textures - all in one library.
+                    </p>
+                    <p>
+                        Inspired by SFML's feel but going further than SFML ever did: a single framework
+                        for both 2D and 3D, with the goal of eventually becoming a complete, sellable
+                        game development toolkit.
+                    </p>
+                    <a href="https://github.com/Krishiv00/GLIM" target="_blank" class="glim-link">View on GitHub →</a>
+                </div>
+                <div class="glim-code-block">
+                    <div class="code-header">
+                        <span class="code-lang">C++</span>
+                        <span class="code-caption">Setting up a 3D scene with GLIM</span>
+                    </div>
+                    <pre class="code-content"><span class="c-comment">// Create a window</span>
+gl::Window window(1280, 720, <span class="c-str">"My App"</span>);
+
+<span class="c-comment">// Load shaders from file</span>
+gl::Shader shader;
+shader.LoadFromFile(<span class="c-str">"vert.glsl"</span>, <span class="c-str">"frag.glsl"</span>);
+
+<span class="c-comment">// Create a camera</span>
+gl::Camera3D camera;
+
+<span class="c-comment">// Pass camera to shader</span>
+shader.SetUniform(<span class="c-str">"u_Camera"</span>, camera);
+
+<span class="c-comment">// Define vertex layout</span>
+gl::VertexArray vertices(gl::PrimitiveType::Triangles);
+
+vertices.PushLayout&lt;<span class="c-type">float</span>&gt;(<span class="c-num">3</span>); <span class="c-comment">// position</span>
+vertices.PushLayout&lt;<span class="c-type">float</span>&gt;(<span class="c-num">3</span>); <span class="c-comment">// color</span>
+vertices.PushLayout&lt;<span class="c-type">float</span>&gt;(<span class="c-num">2</span>); <span class="c-comment">// normals</span>
+
+<span class="c-comment">// Add vertices</span>
+vertices.Append({ ... });
+
+<span class="c-comment">// Render to active window</span>
+vertices.Draw();
+
+<span class="c-comment">// That's it!</span>
+</pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section id="projects" class="projects-section">
+        <div class="reveal">
+            <div class="section-label">// projects</div>
+            <h2 class="section-title">Built From Scratch</h2>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- SMB Clone -->
+            <article class="project-card" data-index="0">
+                <div class="card-image">
+                    <img src="assets/images/placeholder.png" alt="Super Mario Bros Clone" loading="lazy">
+                    <div class="card-image-overlay">
+                        <span>C++ &nbsp;·&nbsp; Reverse Engineering &nbsp;·&nbsp; NES</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-header-row">
+                        <h3>Super Mario Bros - Authentic Clone</h3>
+                        <a href="https://github.com/Krishiv00/Super-Mario-Bros-2" target="_blank" class="card-gh-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        Not a remake - a behavioral reconstruction. The goal: if a speedrunner or TAS
+                        author can do it on real NES hardware, they can do it here.
+                    </p>
+                    <p class="card-desc">
+                        Collision uses interaction points pulled directly from the original NES assembly,
+                        not hitboxes. Level maps are parsed at runtime from the actual ROM's 2-byte object
+                        format - the same data Nintendo shipped in 1985. Mario's physics are reverse-engineered
+                        frame by frame. Every intentional bug - the Minus World, the flagpole glitch,
+                        timing-dependent micro-quirks - is preserved exactly.
+                    </p>
+                    <p class="card-desc">
+                        TAS support with deterministic frame-perfect input playback. Frame advance for
+                        stepping through the game one frame at a time, exactly like FCEUX.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Reverse Engineering</span>
+                        <span class="tag">NES</span>
+                        <span class="tag">Physics</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Chess Engine -->
+            <article class="project-card" data-index="1">
+                <div class="card-image">
+                    <img src="assets/images/placeholder.png" alt="Chess Engine" loading="lazy">
+                    <div class="card-image-overlay">
+                        <span>C++ &nbsp;·&nbsp; AI &nbsp;·&nbsp; UCI</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-header-row">
+                        <h3>Chess Engine</h3>
+                        <a href="https://github.com/Krishiv00/Chess" target="_blank" class="card-gh-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        A UCI-compliant chess engine written from scratch in C++, rated approximately
+                        2300 on Lichess. But strip the engine out entirely - what remains is a fully
+                        polished chess application.
+                    </p>
+                    <p class="card-desc">
+                        Two players can play against each other on the same computer, with arrow marking,
+                        sound effects, and FEN save/load for resuming any position. The kind of
+                        quality-of-life features that separate a finished product from a tech demo.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">UCI</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Algorithms</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CHIP-8 Family -->
+            <article class="project-card" data-index="2">
+                <div class="card-image">
+                    <img src="assets/images/placeholder.png" alt="CHIP-8 Toolchain" loading="lazy">
+                    <div class="card-image-overlay">
+                        <span>C++ &nbsp;·&nbsp; Emulation &nbsp;·&nbsp; Compilers</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-header-row">
+                        <h3>CHIP-8 Toolchain</h3>
+                        <a href="https://github.com/Krishiv00" target="_blank" class="card-gh-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        Not just an emulator - a complete toolchain. Three programs that form a closed loop:
+                        an <strong>emulator</strong> that runs any CHIP-8 ROM, a <strong>decompiler</strong>
+                        that converts the binary into a readable assembly-like format, and a
+                        <strong>compiler</strong> that converts it back.
+                    </p>
+                    <p class="card-desc">
+                        The roundtrip is lossless - compile → decompile → compile produces byte-for-byte
+                        identical output. Getting there required hours of raw hex comparison and manual
+                        instruction tracing to find a critical encoding inconsistency that caused silent
+                        data loss.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Emulation</span>
+                        <span class="tag">Compiler</span>
+                        <span class="tag">Assembly</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Neural Network -->
+            <article class="project-card" data-index="3">
+                <div class="card-image">
+                    <img src="assets/images/placeholder.png" alt="Neural Network from Scratch" loading="lazy">
+                    <div class="card-image-overlay">
+                        <span>C++ &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; MNIST</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-header-row">
+                        <h3>Neural Network from Scratch</h3>
+                        <a href="https://github.com/Krishiv00" target="_blank" class="card-gh-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/> </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        Written entirely in C++ with zero libraries - the network architecture,
+                        forward pass, backpropagation, and training loop are all hand-coded.
+                        The network layout is fully dynamic: pass a vector of layer sizes and
+                        it configures itself at runtime.
+                    </p>
+                    <p class="card-desc">
+                        Trained on logic gates first, then the MNIST digit recognition dataset.
+                        Includes a custom binary serialization format that saves and restores
+                        arbitrary network structures, weights, and biases to disk with no loss.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Backpropagation</span>
+                        <span class="tag">MNIST</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Custom Shell -->
+            <article class="project-card" data-index="4">
+                <div class="card-image">
+                    <img src="assets/images/placeholder.png" alt="Custom Shell" loading="lazy">
+                    <div class="card-image-overlay">
+                        <span>C++ &nbsp;·&nbsp; Systems &nbsp;·&nbsp; Cross-Platform</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-header-row">
+                        <h3>Custom Shell</h3>
+                        <a href="https://github.com/Krishiv00" target="_blank" class="card-gh-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        A full POSIX-style shell built from scratch in C++, running on both Windows
+                        and Unix. OS-specific code is abstracted into a clean platform layer with
+                        separate implementations per system.
+                    </p>
+                    <p class="card-desc">
+                        Full tokenization with edge cases handled. PATH search and execution, pipes
+                        (<code>|</code>), redirects (<code>&gt; &gt;&gt; 2&gt; 2&gt;&gt;</code>), and
+                        persistent <code>.shell_history</code>. Tab completion required writing a custom
+                        <code>ReadLine</code> from scratch - handling raw terminal mode, LCP resolution,
+                        double-tab listing, cursor movement, and word-jump navigation entirely by hand.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Systems</span>
+                        <span class="tag">Cross-Platform</span>
+                        <span class="tag">Terminal</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Text Editor -->
+            <article class="project-card" data-index="5">
+                <div class="card-image">
+                    <img src="assets/images/placeholder.png" alt="Text Editor" loading="lazy">
+                    <div class="card-image-overlay">
+                        <span>C++ &nbsp;·&nbsp; Native &nbsp;·&nbsp; WIP</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-header-row">
+                        <h3>Text Editor</h3>
+                        <a href="https://github.com/Krishiv00" target="_blank" class="card-gh-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        A native VSCode-style editor built in C++. The motivation is concrete: VSCode
+                        runs on Electron - a VM on a VM - and on older hardware it shows. Recording
+                        code videos becomes choppy. This editor is built natively, with dirty rendering
+                        (only redraw on change) for minimal resource usage.
+                    </p>
+                    <p class="card-desc">
+                        Already working: file explorer with tree view, file tabs, image preview, full
+                        text editing with auto-indent, auto-brackets, comment toggle, and scrolling.
+                        The undo/redo system stores individual <em>actions</em> rather than full file
+                        snapshots - keeping memory usage minimal regardless of file size or edit history.
+                    </p>
+                    <p class="card-desc">
+                        The plan is to ship it and use it daily - forcing features to earn their place
+                        through real use rather than speculation.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Native</span>
+                        <span class="tag">Editor</span>
+                        <span class="tag">Performance</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Terrain Generator -->
+            <article class="project-card" data-index="6">
+                <div class="card-image">
+                    <img src="assets/images/placeholder.png" alt="Terrain Generator" loading="lazy">
+                    <div class="card-image-overlay">
+                        <span>C++ &nbsp;·&nbsp; Rendering &nbsp;·&nbsp; Procedural</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-header-row">
+                        <h3>Isometric Terrain Generator</h3>
+                        <a href="https://github.com/Krishiv00" target="_blank" class="card-gh-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        A 3D procedural terrain renderer that projects a voxel world into isometric
+                        view using manual coordinate transformation - built before diving into
+                        proper 3D rendering techniques.
+                    </p>
+                    <p class="card-desc">
+                        A side panel of live sliders controls noise parameters; the terrain updates
+                        in real time. Includes sky gradient and star rendering. A visibility map
+                        skips occluded tiles, and frustum culling skips off-screen geometry.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Procedural</span>
+                        <span class="tag">Isometric</span>
+                        <span class="tag">Noise</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Other Work -->
+        <div class="other-work reveal">
+            <h3 class="other-work-title">// other explorations</h3>
+            <div class="other-work-grid">
+                <a href="https://github.com/Krishiv00" target="_blank" class="other-card">
+                    <span class="other-card-name">GPU Path Tracer</span>
+                    <span class="other-card-desc">Ray-traced renderer with custom scene format, now being rebuilt as a GLIM showcase</span>
+                    <span class="other-card-tag">C++ · OpenGL · Compute Shaders</span>
+                </a>
+                <a href="https://github.com/Krishiv00" target="_blank" class="other-card">
+                    <span class="other-card-name">SPH Fluid Simulation</span>
+                    <span class="other-card-desc">Smoothed-particle hydrodynamics fluid sim with spatial hashing for performance</span>
+                    <span class="other-card-tag">C++ · Physics · Simulation</span>
+                </a>
+                <a href="https://github.com/Krishiv00" target="_blank" class="other-card">
+                    <span class="other-card-name">2D Physics Engine</span>
+                    <span class="other-card-desc">Rigid body physics engine with collision resolution, built from scratch</span>
+                    <span class="other-card-tag">C++ · Physics</span>
+                </a>
+                <a href="https://github.com/Krishiv00/Graph-Plotter" target="_blank" class="other-card">
+                    <span class="other-card-name">Graph Plotter</span>
+                    <span class="other-card-desc">Desmos-style 2D plotter with a custom equation parser and editor</span>
+                    <span class="other-card-tag">C++ · Parsing · Math</span>
+                </a>
+                <a href="https://github.com/Krishiv00" target="_blank" class="other-card">
+                    <span class="other-card-name">Voxel Engines</span>
+                    <span class="other-card-desc">Minecraft and Terraria-style voxel world renderers</span>
+                    <span class="other-card-tag">C++ · OpenGL · 3D</span>
+                </a>
+                <a href="https://github.com/Krishiv00" target="_blank" class="other-card">
+                    <span class="other-card-name">TTF &amp; PNG Parsers</span>
+                    <span class="other-card-desc">File format parsers written from scratch - no libraries, just spec docs</span>
+                    <span class="other-card-tag">C++ · Parsing · Binary Formats</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Writing Section -->
+    <section id="writing" class="writing-section">
+        <div class="writing-header reveal">
+            <div class="section-label">// writing</div>
+            <h2 class="section-title">Making Complex Things Approachable</h2>
+            <p class="writing-intro">
+                I write at <a href="https://elvinnn.com" target="_blank">elvinnn.com</a> - a blog
+                I co-founded with four friends. My pieces range from technical deep-dives to
+                explorations of how people think and behave.
+            </p>
+        </div>
+        <div class="writing-grid reveal">
+            <a href="https://elvinnn.com/how-neural-networks-learn/" target="_blank" class="writing-card writing-card--featured">
+                <div class="writing-card-inner">
+                    <span class="writing-cat writing-cat--tech">Technology</span>
+                    <h3>How Do Neural Networks Learn?</h3>
+                    <p>A beginner's guide to AI and the brain - explaining backpropagation and learning from first principles, no prior knowledge required.</p>
+                    <span class="writing-read">Read article →</span>
+                </div>
+            </a>
+            <a href="https://elvinnn.com/how-ai-knows-you-better-than-you-do/" target="_blank" class="writing-card">
+                <div class="writing-card-inner">
+                    <span class="writing-cat writing-cat--tech">Technology</span>
+                    <h3>How AI Knows You Better Than You Do</h3>
+                    <p>How recommendation systems and behavioral models build a picture of you that's often more accurate than your own self-assessment.</p>
+                    <span class="writing-read">Read article →</span>
+                </div>
+            </a>
+            <a href="https://elvinnn.com/why-we-procrastinate-and-how-to-overcome-it/" target="_blank" class="writing-card">
+                <div class="writing-card-inner">
+                    <span class="writing-cat writing-cat--self">Self Improvement</span>
+                    <h3>Why We Procrastinate, And How to Overcome It</h3>
+                    <p>A look at the psychology behind procrastination - and practical, evidence-grounded approaches for actually getting things done.</p>
+                    <span class="writing-read">Read article →</span>
+                </div>
+            </a>
+        </div>
+        <div class="writing-footer">
+            <a href="https://elvinnn.com/author/krishiv-goel/" target="_blank" class="btn-secondary">All Articles →</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <div class="contact-inner reveal">
+            <div class="section-label">// contact</div>
+            <h2 class="contact-title">Let's Talk</h2>
+            <p class="contact-sub">
+                Whether you're looking for a developer, a writer, or just want to talk
+                about low-level systems - my inbox is open.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:KrishivGoelXD@gmail.com" class="contact-link contact-link--email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    KrishivGoelXD@gmail.com
+                </a>
+                <a href="https://github.com/Krishiv00" target="_blank" class="contact-link contact-link--gh">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    github.com/Krishiv00
+                </a>
+                <a href="https://elvinnn.com/author/krishiv-goel/" target="_blank" class="contact-link contact-link--blog">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    elvinnn.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <span>Krishiv Goel</span>
+        <span class="footer-sep">·</span>
+        <span>Built with HTML, CSS &amp; JS</span>
+        <span class="footer-sep">·</span>
+        <a href="https://github.com/Krishiv00" target="_blank">GitHub</a>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
