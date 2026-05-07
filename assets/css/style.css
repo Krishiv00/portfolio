@@ -401,7 +401,7 @@ code {
 
 .hero-text-inner {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 32px;
 }
 
@@ -423,11 +423,7 @@ code {
     box-shadow: 0 0 0 4px rgba(48, 164, 108, 0.08), 0 8px 32px rgba(0,0,0,0.4);
     display: block;
     transition: border-color 0.3s, box-shadow 0.3s;
-    /* Center photo against the 2-line name (2 × ~80px = ~160px tall at max size) */
-    margin-top: 0;
-    align-self: flex-start;
-    position: relative;
-    top: calc(clamp(48px, 6vw, 80px) - 100px);
+    position: static;
 }
 
 .hero-photo:hover {
@@ -1028,10 +1024,17 @@ code {
     background: rgba(48,164,108,0.05);
 }
 
+.contact-link--phone:hover {
+    border-color: #3b82f6;
+    color: #60a5fa;
+    background: rgba(59,130,246,0.08);
+}
+
 .contact-link--gh:hover {
-    border-color: #6e7681;
-    color: #e8edf2;
-    background: rgba(110,118,129,0.05);
+    border-color: #ffffff;
+    color: #ffffff;
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 0 12px rgba(255,255,255,0.08);
 }
 
 .contact-link--blog:hover {
@@ -1179,7 +1182,7 @@ code {
 
     .hero-text-inner {
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
         gap: 20px;
     }
 
@@ -1187,7 +1190,6 @@ code {
         width: 110px;
         height: 110px;
         flex-shrink: 0;
-        margin-top: 4px;
     }
 
     .contact-link {
