@@ -146,24 +146,17 @@
                         <span class="code-caption">Setting up a 3D scene with GLIM</span>
                     </div>
                     <pre class="code-content"><span class="c-comment">// Create a window</span>
-gl::Window window(1280, 720, <span class="c-str">"My App"</span>);
+gl::Window window(1280, 720, <span class="c-str">"My Game"</span>);
 
 <span class="c-comment">// Load shaders from file</span>
 gl::Shader shader;
 shader.LoadFromFile(<span class="c-str">"vert.glsl"</span>, <span class="c-str">"frag.glsl"</span>);
-
-<span class="c-comment">// Create a camera</span>
-gl::Camera3D camera;
-
-<span class="c-comment">// Pass camera to shader</span>
-shader.SetUniform(<span class="c-str">"u_Camera"</span>, camera);
 
 <span class="c-comment">// Define vertex layout</span>
 gl::VertexArray vertices(gl::PrimitiveType::Triangles);
 
 vertices.PushLayout&lt;<span class="c-type">float</span>&gt;(<span class="c-num">3</span>); <span class="c-comment">// position</span>
 vertices.PushLayout&lt;<span class="c-type">float</span>&gt;(<span class="c-num">3</span>); <span class="c-comment">// color</span>
-vertices.PushLayout&lt;<span class="c-type">float</span>&gt;(<span class="c-num">2</span>); <span class="c-comment">// normals</span>
 
 <span class="c-comment">// Add vertices</span>
 vertices.Append({ ... });
