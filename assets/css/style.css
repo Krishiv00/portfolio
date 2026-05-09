@@ -22,6 +22,9 @@
     --text-dimmer: #444f5a;
     --code-bg: #080d12;
 
+    --purple: #a78bfa;
+    --purple-dim: #7c3aed;
+
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
     --font-serif: 'Fraunces', Georgia, serif;
 
@@ -1040,22 +1043,27 @@ code {
 }
 
 .contact-link--phone:hover {
-    border-color: #3b82f6;
-    color: #60a5fa;
-    background: rgba(59,130,246,0.08);
+    border-color: var(--purple);
+    color: var(--purple);
+    background: rgba(167,139,250,0.08);
 }
 
 .contact-link--gh:hover {
-    border-color: #ffffff;
-    color: #ffffff;
-    background: rgba(255,255,255,0.12);
-    box-shadow: 0 0 12px rgba(255,255,255,0.08);
+    border-color: #8b949e;
+    color: #c9d1d9;
+    background: rgba(139,148,158,0.1);
 }
 
 .contact-link--blog:hover {
     border-color: var(--amber);
     color: var(--amber);
     background: rgba(240,164,41,0.05);
+}
+
+.contact-link--li:hover {
+    border-color: #3b82f6;
+    color: #60a5fa;
+    background: rgba(59,130,246,0.08);
 }
 
 .footer {
