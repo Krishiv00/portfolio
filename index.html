@@ -143,14 +143,13 @@
                 <div class="glim-code-block">
                     <div class="code-header">
                         <span class="code-lang">C++</span>
-                        <span class="code-caption">Setting up a 3D scene with GLIM</span>
+                        <span class="code-caption">Setting up a 3D scene with GLIM (pseudocode)</span>
                     </div>
-                    <pre class="code-content"><span class="c-comment">// Create a window</span>
-gl::Window window(1280, 720, <span class="c-str">"My Game"</span>);
+<pre class="code-content"><span class="c-comment">// Create window</span>
+gl::Window window(1280, 720, <span class="c-str">"My Game"</span>, gl::Mode::Mode3D);
 
-<span class="c-comment">// Load shaders from file</span>
-gl::Shader shader;
-shader.LoadFromFile(<span class="c-str">"vert.glsl"</span>, <span class="c-str">"frag.glsl"</span>);
+<span class="c-comment">// Load shader</span>
+gl::Shader shader(<span class="c-str">"vert.glsl"</span>, <span class="c-str">"frag.glsl"</span>);
 
 <span class="c-comment">// Define vertex layout</span>
 gl::VertexArray vertices(gl::PrimitiveType::Triangles);
