@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://krishiv00.github.io/portfolio/sitemap.xml

@@ -157,15 +157,3 @@ navAnchors.forEach(a => {
 
 window.addEventListener('scroll', setActiveNavIfNotSuppressed, { passive: true });
 setActiveNav();
-
-const style = document.createElement('style');
-style.textContent = `
-    .nav-links a.active {
-        color: var(--green) !important;
-    }
-    .nav-links a.active::after {
-        width: 100% !important;
-    }
-`;
-
-document.head.appendChild(style);
