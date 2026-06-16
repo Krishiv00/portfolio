@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
 </head>
 <body>
 
@@ -17,7 +18,7 @@
             <span class="nav-logo">KG<span class="cursor-blink">_</span></span>
             <ul class="nav-links">
                 <li><a href="#about">about</a></li>
-                <li><a href="#glim">glim</a></li>
+                <li><a href="#elvin">elvin</a></li>
                 <li><a href="#projects">projects</a></li>
                 <li><a href="#writing">writing</a></li>
                 <li><a href="#contact">contact</a></li>
@@ -32,7 +33,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <ul>
             <li><a href="#about" class="mobile-link">about</a></li>
-            <li><a href="#glim" class="mobile-link">glim</a></li>
+            <li><a href="#elvin" class="mobile-link">elvin</a></li>
             <li><a href="#projects" class="mobile-link">projects</a></li>
             <li><a href="#writing" class="mobile-link">writing</a></li>
             <li><a href="#contact" class="mobile-link">contact</a></li>
@@ -55,15 +56,18 @@
                     <p class="terminal-line t-output">Krishiv Goel</p>
                     <p class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat about.txt</span></p>
                     <div class="terminal-line t-output about-text">
-                        Self-taught systems programmer. I started with Windows batch scripts,
-                        moved to Python, and landed in C++ - where I've stayed. I build things
-                        at the low level: engines, renderers, emulators, parsers, tools.
-                        I also write - about technology, AI, and the stuff that makes us human.
+                        Self-taught systems programmer and web developer. I started with Windows
+                        batch scripts, moved to Python, and landed in C++ - where I've stayed.
+                        I build things at the low level: engines, renderers, emulators, parsers,
+                        tools. I also built elvinnn.com from scratch - no framework, no CMS,
+                        just vanilla HTML, CSS, and JavaScript.
                     </div>
                     <p class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat skills.txt</span></p>
                     <div class="terminal-line t-output skills-grid">
                         <span class="skill-tag">C++</span>
                         <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML &amp; CSS</span>
+                        <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">OpenGL</span>
                         <span class="skill-tag">Systems Programming</span>
                         <span class="skill-tag">Graphics</span>
@@ -78,7 +82,7 @@
                 <div class="hero-text-inner">
                     <div class="hero-text-copy">
                         <h1 class="hero-name">Krishiv<br><em>Goel</em></h1>
-                        <p class="hero-sub">Systems programmer &amp; technical writer.<br>I build from scratch - and document what I learn.</p>
+                        <p class="hero-sub">Systems programmer &amp; web developer.<br>I build from scratch - low-level engines to full publishing platforms.</p>
                         <div class="hero-cta">
                             <a href="#projects" class="btn-primary">View Projects</a>
                             <a href="#contact" class="btn-secondary">Get in Touch</a>
@@ -93,81 +97,70 @@
         <div class="scroll-hint">scroll<span class="scroll-arrow">↓</span></div>
     </section>
 
-    <!-- GLIM Featured -->
-    <section id="glim" class="glim-section">
-        <div class="glim-inner reveal">
+    <!-- Elvin Featured -->
+    <section id="elvin" class="featured-section">
+        <div class="featured-inner reveal">
         <div class="section-label">// featured project</div>
-            <div class="glim-header">
+            <div class="featured-header">
                 <div>
-                    <h2 class="glim-title">GLIM</h2>
-                    <p class="glim-subtitle">Graphics Layer &amp; Interactive Middleware</p>
+                    <h2 class="featured-title">Elvin</h2>
+                    <p class="featured-subtitle">A publishing platform built from scratch</p>
                 </div>
-                <div class="glim-tags">
-                    <span class="tag">C++</span>
-                    <span class="tag">OpenGL</span>
-                    <span class="tag">Framework</span>
-                    <span class="tag">WIP</span>
+                <div class="featured-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Python</span>
                 </div>
             </div>
-            <div class="glim-body">
-                <div class="glim-description">
+            <div class="featured-body">
+                <div class="featured-description">
                     <p>
-                        Raw OpenGL is brutal. Hundreds of lines of boilerplate just to open a window
-                        and draw a triangle - shader compilation, buffer binding, stride calculations,
-                        manual lifetime management. GLIM exists to make that disappear.
+                        Most blogs run on WordPress or some hosted CMS. Elvin runs on nothing
+                        but HTML, CSS, and vanilla JavaScript - no framework, no build step,
+                        no Node.js, no dependencies. I designed and built every part of it
+                        from the ground up, entirely on my own.
                     </p>
                     <p>
-                        It's a C++ framework built on top of OpenGL that abstracts the painful parts
-                        into clean, intuitive objects. A <code>Window</code> handles creation, input devices,
-                        vsync, fullscreen, and frame timing in one constructor call. A <code>Shader</code>
-                        loads, compiles, and links from two file paths - and its templated
-                        <code>SetUniform</code> figures out the right GL call automatically, no matter
-                        what type you pass. A <code>VertexArray</code> eliminates stride and offset
-                        math entirely - just call <code>PushLayout&lt;type&gt;(count)</code> per attribute
-                        and it handles the rest.
+                        The site has a full data layer: a single posts registry, author profiles,
+                        and topic definitions that drive every card, feed, archive, and sitemap
+                        entry across the whole platform. The design system lives in one CSS file
+                        of custom properties - change a token and it propagates everywhere.
+                        Every post automatically gets a reading progress tracker, animated headings,
+                        staggered reveals, a share widget, and a comment form. Zero configuration required.
                     </p>
                     <p>
-                        Beyond rendering: a full collision detection system covering 12+ shapes
-                        (Rectangle, Sphere, Cone, Cylinder, Polygon2D, Polygon3D, and more) with
-                        every cross-type <code>Intersects()</code> pair implemented. A Camera3D that
-                        owns its own matrices and passes to a shader in one line. Input, clock,
-                        profiler, SSBO, textures - all in one library.
+                        The standout feature is <code>new-post.py</code> - a Python CLI script any
+                        author can run to go from zero to a fully wired, SEO-ready post scaffold
+                        in seconds. It prompts for title, slug, excerpt, topics, and author, then
+                        generates the post page, a pre-filled RSS entry, a sitemap entry, and a
+                        copy-paste snippet for the data registry. No boilerplate to touch. No
+                        structure to figure out. Just open the file and write.
                     </p>
-                    <p>
-                        Inspired by SFML's feel but going further than SFML ever did: a single framework
-                        for both 2D and 3D, with the goal of eventually becoming a complete, sellable
-                        game development toolkit.
-                    </p>
-                    <a href="https://github.com/Krishiv00/GLIM" target="_blank" class="glim-link">View on GitHub →</a>
+                    <a href="https://elvinnn.com" target="_blank" class="featured-link">Visit the site →</a>
                 </div>
-                <div class="glim-code-block">
+                <div class="featured-code-block">
                     <div class="code-header">
-                        <span class="code-lang">C++</span>
-                        <span class="code-caption">Setting up a 3D scene with GLIM (pseudocode)</span>
+                        <span class="code-lang">bash</span>
+                        <span class="code-caption">Creating a new post in seconds</span>
                     </div>
-<pre class="code-content"><span class="c-comment">// Create window</span>
-gl::Window window(1280, 720, <span class="c-str">"My Game"</span>, gl::Mode::Mode3D);
+<pre><code class="language-bash">$ python scripts/new-post.py
 
-<span class="c-comment">// Load shader</span>
-gl::Shader shader(<span class="c-str">"vert.glsl"</span>, <span class="c-str">"frag.glsl"</span>);
+Title     : Backpropagation Explained
+Slug      : backpropagation-explained
+Excerpt   : How neural networks actually learn from their mistakes.
+Topics    : technology
+Author    : krishiv-goel
+Date      : 2026-01-15
+Read time : 8 min
 
-<span class="c-comment">// Define vertex layout</span>
-gl::VertexArray vertices(gl::PrimitiveType::Triangles);
+✓  posts/backpropagation-explained/index.html
+✓  post-entry.txt    →  paste into .data/posts.js
+✓  rss-entry.txt     →  paste into rss.xml
+✓  sitemap-entry.txt →  paste into sitemap.xml
 
-vertices.PushLayout&lt;<span class="c-type">float</span>&gt;(<span class="c-num">3</span>); <span class="c-comment">// position</span>
-vertices.PushLayout&lt;<span class="c-type">float</span>&gt;(<span class="c-num">3</span>); <span class="c-comment">// color</span>
-
-<span class="c-comment">// Add vertices</span>
-vertices.Append({ ... });
-
-<span class="c-comment">// Render to active window</span>
-vertices.Draw();
-
-<span class="c-comment">// Swap buffers</span>
-window.Display();
-
-<span class="c-comment">// That's it!</span>
-</pre>
+Place your cover image at:
+  posts/backpropagation-explained/images/cover.webp</code></pre>
                 </div>
             </div>
         </div>
@@ -182,8 +175,60 @@ window.Display();
 
         <div class="projects-grid">
 
+            <!-- GLIM -->
+            <article class="project-card project-card--wide" data-index="0">
+                <div class="card-body">
+                    <div class="card-header-row">
+                        <h3>GLIM - Graphics Layer &amp; Interactive Middleware</h3>
+                        <a href="https://github.com/Krishiv00/GLIM" target="_blank" class="card-gh-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        A C++ framework built on top of OpenGL that makes the boilerplate disappear.
+                        A <code>Window</code> handles creation, input, vsync, and frame timing in
+                        one constructor call. A <code>Shader</code> loads, compiles, and links from
+                        two file paths - and its templated <code>SetUniform</code> picks the right
+                        GL call automatically. A <code>VertexArray</code> eliminates all stride and
+                        offset math: just call <code>PushLayout&lt;type&gt;(count)</code> per attribute.
+                    </p>
+                    <p class="card-desc">
+                        Full collision detection across 12+ shapes with every cross-type
+                        <code>Intersects()</code> pair implemented. Camera3D, input, clock, profiler,
+                        SSBO, textures - single framework for both 2D and 3D. The long-term goal:
+                        a complete, sellable game development toolkit.
+                    </p>
+                    <div class="featured-code-block" style="margin-top:1rem;">
+                        <div class="code-header">
+                            <span class="code-lang">C++</span>
+                            <span class="code-caption">Setting up a 3D scene</span>
+                        </div>
+<pre><code class="language-cpp">// Create window
+gl::Window window(1280, 720, "My Game", gl::Mode::Mode3D);
+
+// Load shader
+gl::Shader shader("vert.glsl", "frag.glsl");
+
+// Define vertex layout - no stride math, ever
+gl::VertexArray vertices(gl::PrimitiveType::Triangles);
+vertices.PushLayout&lt;float&gt;(3); // position
+vertices.PushLayout&lt;float&gt;(3); // color
+
+vertices.Append({ ... });
+vertices.Draw();
+window.Display(); // That's it.</code></pre>
+                    </div>
+                    <div class="card-tags" style="margin-top:1rem;">
+                        <span class="tag">C++</span>
+                        <span class="tag">OpenGL</span>
+                        <span class="tag">Framework</span>
+                        <span class="tag">WIP</span>
+                    </div>
+                </div>
+            </article>
+
             <!-- SMB Clone -->
-            <article class="project-card" data-index="0">
+            <article class="project-card" data-index="1">
                 <div class="card-image">
                     <img src="assets/images/mario.webp" alt="Super Mario Bros Clone" loading="lazy">
                     <div class="card-image-overlay">
@@ -222,7 +267,7 @@ window.Display();
             </article>
 
             <!-- Chess Engine -->
-            <article class="project-card" data-index="1">
+            <article class="project-card" data-index="2">
                 <div class="card-image">
                     <img src="assets/images/chess.webp" alt="Chess Engine" loading="lazy">
                     <div class="card-image-overlay">
@@ -256,7 +301,7 @@ window.Display();
             </article>
 
             <!-- CHIP-8 Family -->
-            <article class="project-card" data-index="2">
+            <article class="project-card" data-index="3">
                 <div class="card-image">
                     <img src="assets/images/chip8.webp" alt="CHIP-8 Toolchain" loading="lazy">
                     <div class="card-image-overlay">
@@ -292,7 +337,7 @@ window.Display();
             </article>
 
             <!-- Graph Plotter -->
-            <article class="project-card" data-index="3">
+            <article class="project-card" data-index="4">
                 <div class="card-image">
                     <img src="assets/images/graph.webp" alt="Graph Plotter" loading="lazy">
                     <div class="card-image-overlay">
@@ -328,7 +373,7 @@ window.Display();
             </article>
 
             <!-- Custom Shell -->
-            <article class="project-card" data-index="4">
+            <article class="project-card" data-index="5">
                 <div class="card-image">
                     <img src="assets/images/shell.webp" alt="Custom Shell" loading="lazy">
                     <div class="card-image-overlay">
@@ -364,7 +409,7 @@ window.Display();
             </article>
 
             <!-- Text Editor -->
-            <article class="project-card" data-index="5">
+            <article class="project-card" data-index="6">
                 <div class="card-image">
                     <img src="assets/images/editor.webp" alt="Text Editor" loading="lazy">
                     <div class="card-image-overlay">
@@ -402,7 +447,7 @@ window.Display();
             </article>
 
             <!-- Terrain Generator -->
-            <article class="project-card" data-index="6">
+            <article class="project-card" data-index="7">
                 <div class="card-image">
                     <img src="assets/images/terrain.webp" alt="Terrain Generator" loading="lazy">
                     <div class="card-image-overlay">
@@ -482,9 +527,9 @@ window.Display();
             <div class="section-label">// writing</div>
             <h2 class="section-title">Making Complex Things Approachable</h2>
             <p class="writing-intro">
-                I write at <a href="https://elvinnn.com" target="_blank">elvinnn.com</a> - a blog
-                I co-founded with four friends. My pieces range from technical deep-dives to
-                explorations of how people think and behave.
+                I built <a href="https://elvinnn.com" target="_blank">elvinnn.com</a> from scratch -
+                the platform, the design, the tooling. I also write there. My pieces range from
+                technical deep-dives to explorations of how people think and behave.
             </p>
         </div>
         <div class="writing-grid reveal">
@@ -524,7 +569,7 @@ window.Display();
             <div class="section-label">// contact</div>
             <h2 class="contact-title">Let's Talk</h2>
             <p class="contact-sub">
-                Whether you're looking for a developer, a writer, or just want to talk
+                Whether you're looking for a developer, a collaborator, or just want to talk
                 about low-level systems - my inbox is open.
             </p>
             <div class="contact-links">
@@ -564,5 +609,8 @@ window.Display();
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>

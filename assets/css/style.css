@@ -502,7 +502,7 @@ code {
     }
 }
 
-.glim-section {
+.featured-section {
     padding: var(--section-pad) 40px;
     background: var(--bg-2);
     border-top: 1px solid var(--border);
@@ -511,7 +511,7 @@ code {
     overflow: hidden;
 }
 
-.glim-section::before {
+.featured-section::before {
     content: '';
     position: absolute;
     top: 0; right: 0;
@@ -520,12 +520,12 @@ code {
     pointer-events: none;
 }
 
-.glim-inner {
+.featured-inner {
     max-width: var(--max-w);
     margin: 0 auto;
 }
 
-.glim-header {
+.featured-header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -534,7 +534,7 @@ code {
     flex-wrap: wrap;
 }
 
-.glim-title {
+.featured-title {
     font-family: var(--font-mono);
     font-size: clamp(36px, 5vw, 64px);
     font-weight: 700;
@@ -543,7 +543,7 @@ code {
     letter-spacing: -0.02em;
 }
 
-.glim-subtitle {
+.featured-subtitle {
     font-family: var(--font-serif);
     font-size: 18px;
     font-weight: 300;
@@ -552,7 +552,7 @@ code {
     margin-top: 6px;
 }
 
-.glim-tags {
+.featured-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -560,25 +560,25 @@ code {
     padding-top: 8px;
 }
 
-.glim-body {
+.featured-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     align-items: start;
 }
 
-.glim-description p {
+.featured-description p {
     color: var(--text);
     line-height: 1.8;
     margin-bottom: 18px;
     font-size: 14px;
 }
 
-.glim-description p:last-of-type {
+.featured-description p:last-of-type {
     margin-bottom: 28px;
 }
 
-.glim-link {
+.featured-link {
     color: var(--green);
     font-size: 13px;
     border-bottom: 1px solid var(--green-dim);
@@ -586,11 +586,11 @@ code {
     transition: border-color 0.2s, color 0.2s;
 }
 
-.glim-link:hover {
+.featured-link:hover {
     border-color: var(--green);
 }
 
-.glim-code-block {
+.featured-code-block {
     background: var(--code-bg);
     border: 1px solid var(--border);
     border-radius: 6px;
@@ -1115,11 +1115,11 @@ code {
         order: 1;
     }
 
-    .glim-body {
+    .featured-body {
         grid-template-columns: 1fr;
     }
 
-    .glim-code-block {
+    .featured-code-block {
         position: static;
     }
 
@@ -1165,14 +1165,14 @@ code {
         padding: 90px 20px 64px;
     }
 
-    .glim-section,
+    .featured-section,
     .projects-section,
     .writing-section,
     .contact-section {
         padding: var(--section-pad) 20px;
     }
 
-    .glim-header {
+    .featured-header {
         flex-direction: column;
     }
 
@@ -1225,7 +1225,7 @@ code {
         font-size: 40px;
     }
 
-    .glim-title {
+    .featured-title {
         font-size: 40px;
     }
 }

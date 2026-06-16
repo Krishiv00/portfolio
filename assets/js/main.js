@@ -158,19 +158,6 @@ navAnchors.forEach(a => {
 window.addEventListener('scroll', setActiveNavIfNotSuppressed, { passive: true });
 setActiveNav();
 
-const codeContent = document.querySelector('.code-content');
-
-if (codeContent) {
-    codeContent.addEventListener('mousemove', (e) => {
-        const rect = codeContent.getBoundingClientRect();
-        const relY = e.clientY - rect.top;
-        const lineH = 22; // approx line height
-        const lineNum = Math.floor(relY / lineH);
-
-        codeContent.style.setProperty('--hover-line', lineNum);
-    });
-}
-
 const style = document.createElement('style');
 style.textContent = `
     .nav-links a.active {
