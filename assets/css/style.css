@@ -1012,12 +1012,6 @@ code {
     background: rgba(48,164,108,0.05);
 }
 
-.contact-link--phone:hover {
-    border-color: var(--purple);
-    color: var(--purple);
-    background: rgba(167,139,250,0.08);
-}
-
 .contact-link--gh:hover {
     border-color: #8b949e;
     color: #c9d1d9;
