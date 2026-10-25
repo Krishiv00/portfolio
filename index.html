@@ -87,6 +87,13 @@
               "name": "Elvin – Publishing Platform",
               "url": "https://elvinnn.com",
               "description": "A full publishing platform built from scratch with vanilla HTML, CSS, and JavaScript - no framework, no build step, no dependencies."
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "VoiceInk – Document-to-Speech Reader",
+              "url": "https://github.com/Krishiv00/voiceink",
+              "description": "A local document narration app with synced word-level highlighting, a custom speech-pacing engine, and a chunked prefetch TTS pipeline built in Python and vanilla JS."
             }
           ]
         }
@@ -117,6 +124,7 @@
             <ul class="nav-links">
                 <li><a href="#about">about</a></li>
                 <li><a href="#elvin">elvin</a></li>
+                <li><a href="#voiceink">voiceink</a></li>
                 <li><a href="#projects">projects</a></li>
                 <li><a href="#writing">writing</a></li>
                 <li><a href="#contact">contact</a></li>
@@ -132,6 +140,7 @@
         <ul>
             <li><a href="#about" class="mobile-link">about</a></li>
             <li><a href="#elvin" class="mobile-link">elvin</a></li>
+            <li><a href="#voiceink" class="mobile-link">voiceink</a></li>
             <li><a href="#projects" class="mobile-link">projects</a></li>
             <li><a href="#writing" class="mobile-link">writing</a></li>
             <li><a href="#contact" class="mobile-link">contact</a></li>
@@ -251,6 +260,48 @@ $ python main.py
 ✓  Live preview connected
 ✓  Reading posts/ and .data/posts.js
 ✓  Ready to write</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VoiceInk Featured -->
+    <section id="voiceink" class="featured-section">
+        <div class="featured-inner reveal">
+        <div class="section-label">// featured project</div>
+            <div class="featured-header">
+                <div>
+                    <h2 class="featured-title">VoiceInk</h2>
+                    <p class="featured-subtitle">A document-to-speech reader with synced word highlighting</p>
+                </div>
+                <div class="featured-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                </div>
+            </div>
+            <div class="featured-body">
+                <div class="featured-description">
+                    <p>
+                        Turn any document into narrated audio. Drop in a
+                        <code>.docx</code>, <code>.pdf</code>, <code>.md</code>, or <code>.txt</code> file -
+                        or paste raw text - and VoiceInk reads it back with word-level highlighting
+                        synced to the audio, live speed and voice controls, and a fully customizable
+                        "vocabulary" for how punctuation and structure get spoken aloud.
+                    </p>
+                    <p>
+                        A custom narration engine parses documents into structural blocks, clusters
+                        sentences into natural speech-length chunks, and injects spoken cues for
+                        headings, paragraphs, etc. The Python backend only reaches for packages
+                        where it has to - <code>docx</code> and <code>pdf</code> parsing, and
+                        <code>edge-tts</code> for speech - everything else is implemented from scratch.
+                    </p>
+                    <a href="https://github.com/Krishiv00/voiceink" target="_blank" rel="noopener noreferrer" class="featured-link">View on GitHub →</a>
+                </div>
+                <div class="featured-image">
+                    <img src="assets/images/voiceink.webp" alt="VoiceInk document-to-speech reader interface with synced word highlighting" loading="lazy" width="900" height="600">
                 </div>
             </div>
         </div>

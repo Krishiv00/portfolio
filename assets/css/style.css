@@ -569,6 +569,21 @@ code {
     top: 80px;
 }
 
+.featured-image {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    position: sticky;
+    top: 80px;
+    background: var(--bg-3);
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .code-header {
     display: flex;
     align-items: center;
@@ -1083,7 +1098,8 @@ code {
         grid-template-columns: 1fr;
     }
 
-    .featured-code-block {
+    .featured-code-block,
+    .featured-image {
         position: static;
     }
 
